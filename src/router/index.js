@@ -1,15 +1,32 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/views/Hello'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello
-    }
-  ]
+let Hello=(resolve) => require(['@/views/Hello'], resolve)
+
+const routes = [
+  {
+    path: '/',
+    name: 'Hello',
+    component: Hello
+  }
+]
+
+const router = new Router({
+  routes,
+  linkActiveClass: 'active',
+  mode: 'history'
 })
+
+router.beforeEach((to, from, next) => {
+  Vue.$loadingBar.start()
+  next()
+});
+
+router.afterEach((to, from, next) => {
+  Vue.$loadingBar.finish()
+  window.scrollTo(0, 0)
+});
+
+export default router

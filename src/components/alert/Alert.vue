@@ -1,13 +1,14 @@
 <template>
-  <div class="alert">
-    {{msg}}
-  </div>
+  <transition name="fade">
+    <div class="hx-alert">
+
+    </div>
+  </transition>
+
 </template>
-<style lang="less" scoped>
-  .alert{
-    background-color: #fff;
-    display: flex;
-    transform: translateX(30px);
+<style lang="less">
+  .hx-alert{
+
   }
 </style>
 <script>
