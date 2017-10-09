@@ -8,10 +8,12 @@ import router from './router'
 // Vue.use(hx)
 import LoadingBar from '@/components/loading-bar'
 import Alert from '@/components/alert'
+import Editor from '@/components/editor'
 
 Vue.$loadingBar=LoadingBar
 Vue.prototype.$loadingBar=LoadingBar
 Vue.component(Alert.name,Alert)
+Vue.component(Editor.name,Editor)
 
 Vue.config.productionTip = false
 

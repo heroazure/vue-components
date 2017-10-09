@@ -4,7 +4,7 @@
   "description": "heroxiao's vue components",
   "author": "heroxiao <heroxiao73@outlook.com>",
   "private": true,
-  "main":"./dist/lib/hx.min.js",
+  "main": "./dist/lib/hx.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "vue": "^2.3.3",
+    "vue-quill-editor": "^2.3.0",
     "vue-router": "^2.6.0"
   },
   "devDependencies": {
